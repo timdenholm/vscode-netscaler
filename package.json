@@ -2,8 +2,13 @@
     "name": "netscaler",
     "displayName": "ns.conf",
     "description": "Syntax highlighter for Citrix NetScaler ns.conf files.",
+<<<<<<< HEAD
     "version": "0.1.0",
     "publisher": "timdenholm",
+=======
+    "version": "1.0.0",
+    "publisher": "Tim Denholm",
+>>>>>>> f809354cf75e6ca5839a74d2fa0dcde3d4b67512
     "license": "APACHE",
     "engines": {
         "vscode": "^1.5.0"
