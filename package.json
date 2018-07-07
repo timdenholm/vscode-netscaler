@@ -1,0 +1,41 @@
+{
+    "name": "netscaler",
+    "displayName": "ns.conf",
+    "description": "Syntax highlighter for Citrix NetScaler ns.conf files.",
+    "version": "1.0.0",
+    "publisher": "Tim Denholm",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/timdenholm/vscode-netscaler.git"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "netscaler",
+                "aliases": [
+                    "NetScaler",
+                    "netscaler"
+                ],
+                "extensions": [
+                    ".conf",
+                    ".txt"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "netscaler",
+                "scopeName": "text.netscaler",
+                "path": "./syntaxes/netscaler.tmLanguage"
+            }
+        ]
+    }
+}
