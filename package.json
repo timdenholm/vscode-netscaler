@@ -4,7 +4,6 @@
     "description": "Syntax highlighter for Citrix NetScaler ns.conf files.",
     "version": "0.1.0",
     "publisher": "timdenholm",
-
     "license": "APACHE",
     "engines": {
         "vscode": "^1.5.0"
