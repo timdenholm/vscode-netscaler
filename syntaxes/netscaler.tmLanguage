@@ -49,7 +49,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(add|bind|set|remove|rm|show|sh|unbind|enable|disable|link|unset|show|stat|rename|apply)\b</string>
+			<string>(?<!-)(add|bind|set|remove|rm|show|sh|unbind|enable|disable|link|unset|show|stat|rename|apply)(?!-|_\w)</string>
 			<key>name</key>
 			<string>entity.name.function.netscaler</string>
 		</dict>
