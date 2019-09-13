@@ -27,6 +27,9 @@
                     ".conf",
                     ".txt"
                 ],
+                "filenames": [
+                    "ns.conf"
+                ],
                 "configuration": "./language-configuration.json"
             }
         ],
@@ -34,7 +37,7 @@
             {
                 "language": "netscaler",
                 "scopeName": "text.netscaler",
-                "path": "./syntaxes/netscaler.tmLanguage"
+                "path": "./syntaxes/netscaler.tmLanguage.json"
             }
         ]
     }
