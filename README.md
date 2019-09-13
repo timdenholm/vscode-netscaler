@@ -1,9 +1,7 @@
 Syntax highlighting for Citrix ADC/NetScaler configuration (ns.conf) files in [Visual Studio Code][1].
 
 ## Installation
-Launch Code's command palette (<kbd>Ctrl</kbd> + <kbd>P</kbd>) and type
-
-  `ext install vscode-netscaler`
+Launch Code's command palette (<kbd>Ctrl</kbd> + <kbd>P</kbd>) and type `ext install vscode-netscaler`.
 
 This extension is published on the [Visual Studio Marketplace][2].
 
