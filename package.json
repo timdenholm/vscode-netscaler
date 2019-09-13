@@ -10,38 +10,34 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/timdenholm/vscode-netscaler"
+        "url": "https://github.com/timdenholm/vscode-netscaler/"
     },
     "bugs": {
-        "url": "https://github.com/timdenholm/vscode-netscaler/issues"
+        "url": "https://github.com/timdenholm/vscode-netscaler/issues/"
     },
     "categories": [
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [
-            {
-                "id": "netscaler",
-                "aliases": [
-                    "NetScaler",
-                    "netscaler"
-                ],
-                "extensions": [
-                    ".conf",
-                    ".txt"
-                ],
-                "filenames": [
-                    "ns.conf"
-                ],
-                "configuration": "./language-configuration.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "netscaler",
-                "scopeName": "text.netscaler",
-                "path": "./syntaxes/netscaler.tmLanguage.json"
-            }
-        ]
+        "languages": [{
+            "id": "netscaler",
+            "aliases": [
+                "NetScaler",
+                "netscaler"
+            ],
+            "extensions": [
+                ".conf",
+                ".txt"
+            ],
+            "filenames": [
+                "ns.conf"
+            ],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "netscaler",
+            "scopeName": "text.netscaler",
+            "path": "./syntaxes/netscaler.tmLanguage.json"
+        }]
     }
 }
