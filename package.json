@@ -2,7 +2,7 @@
     "name": "netscaler",
     "displayName": "ns.conf",
     "description": "Syntax highlighter for Citrix NetScaler ns.conf files.",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "publisher": "timdenholm",
     "license": "APACHE",
     "engines": {
@@ -10,7 +10,10 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/timdenholm/vscode-netscaler.git"
+        "url": "https://github.com/timdenholm/vscode-netscaler"
+    },
+    "bugs": {
+        "url": "https://github.com/timdenholm/vscode-netscaler/issues"
     },
     "categories": [
         "Programming Languages"
