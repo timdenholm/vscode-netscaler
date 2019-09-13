@@ -1,0 +1,77 @@
+{
+  "name": "NetScaler",
+  "scopeName": "text.netscaler",
+  "uuid": "59aad49b-40da-4cbc-8106-8d93ba99014f",
+  "patterns": [
+    {
+      "match": "^[\\s]*#(.*)",
+      "name": "comment.netscaler"
+    },
+    {
+      "match": "\\s+[0-9]+",
+      "name": "constant.numeric.netscaler"
+    },
+    {
+      "match": "\\d+\\.\\d+\\.\\d+\\.\\d+(/\\d{1,2})?",
+      "name": "constant.numeric.netscaler"
+    },
+    {
+      "match": "[0-9a-fA-F]{0,4}:([0-9a-fA-F]{0,4}:)+[0-9a-fA-F]{0,4}(/\\d{1,3})?",
+      "name": "constant.numeric.netscaler"
+    },
+    {
+      "match": "\\b([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}|\\h{1,4}\\.\\h{1,4}\\.\\h{1,4}(\\.\\h{1,2})?)\\b",
+      "name": "constant.numeric.netscaler"
+    },
+    {
+      "match": "\\b(==)\\b",
+      "name": "keyword.operator.netscaler"
+    },
+    {
+      "begin": "\"",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.netscaler"
+        }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.netscaler"
+        }
+      },
+      "name": "string.quoted.double.netscaler",
+      "patterns": [
+        {
+          "include": "#escaped_char"
+        }
+      ]
+    },
+    {
+      "match": "(?<!\\-|\\_|\\w)(add|bind|set|remove|rm|show|sh|unbind|enable|disable|link|unset|show|stat|rename|apply)(?!-|\\_|\\w)",
+      "name": "entity.name.function.netscaler"
+    },
+    {
+      "match": "(?<!\\-|\\_|\\w)(stream|feo|appqoe|appflow|transform|tunnel|uiinternal|filter|rise|callhome|aaa|route|responder|rewrite|vpn|interface|ns|audit|system|rsskeytype|lacp|vlan|snmp|ipsec|interfacePair|fis|nd6RAvariables|ssl|server|subscriber|authentication|authorization|lb|serviceGroup|gslb|cmp|L3Param|appfw|ip6TunnelParam|ptp|dns|cache|HA|servicegroup|AppFlow|CH|CF|WL|cs|CR|sslvpn|FR|L3|MBF|Edge|USNIP|PMTUD|rdp|ca|service|locationParameter|tm|LO|channel|LA)(?!-|\\_|\\w)",
+      "name": "entity.name.type.netscaler"
+    },
+    {
+      "match": "(?<!\\-|\\_|\\w)(acl|settings|collector|limitIdentifier|expression|stringmap|partition|ip|ip6|vserver|policy|action|group|user|hostName|alarm|community|parameter|trap|option|tcpProfile|pbr|certkey|cipher|encryptionParams|global|nsRec|addRec|config|feature|mode|profile|radiusAction|view|suffix|zone|sessionParameter|crl|authnProfile|nameServer|weblogparam|selector|eula|httpParam|ptrRec|tcpbufParam|site|certKey|manager|syslogAction|cachegroup|messageaction|node|sessionPolicy|rpcNode|monitor|sessionAction|policylabel|syslogPolicy|trafficPolicy|certPolicy|certAction|trafficAction|portaltheme|clientlessAccessPolicy|param|clientlessAccessProfile|formSSOAction|intranetApplication|cmdPolicy|preauthenticationaction|httpprofile|patset|contentGroup|radiusPolicy|nameserver|diameter|ldapAction|tcpbufparam|tcpParam|serverprofile|preauthenticationpolicy|servicegroup|ldapPolicy|superuser|httpProfile|url|samlAction|samlPolicy|httpCallout|trafficDomain|rnat|inat|pbrs)(?!-|\\_|\\w)",
+      "name": "entity.name.other.netscaler"
+    },
+    {
+      "match": "\\b(-targetLBVserver|-rule|-action|-serviceName|-domainName|-timeout)\\b",
+      "name": "support.function.netscaler"
+    },
+    {
+      "match": "(?<!\\-|\\_|\\w)(HTTP|SSL|DNS|ANY|TCP|Done|SSL_BRIDGE|NONE|NORMAL|ON|ALLOW|DENY|OFF|Browser|all|default|none|REQUEST|END|NEXT|Optional|NO|YES|DISABLED|ENABLED|Major|Minor|REGEX|TRANSPARENT|RES_OVERRIDE|REQ_OVERRIDE|noop|BASEFILE|Deltajs|debug|info|critical|warning|primary|secondary|RES_DEFAULT|REQ_DEFAULT|replace|replace_all|insert_before_all|insert_before|insert_http_header|nocache|roundrobin|generic|public|nopolicy|DER|ASYMMETRIC|SYMMETRIC|specific|UTF_8|VIP|link-local|NSIP|MIP|SNIP|SECUREONLY|ShareFile_Policy|ShareFile_Action|ShareFile_Profile|_SF_SESSION_ACT|_SF_SESSION_POL|TRUE|FALSE|ns_true|ns_false|NS_TRUE|NS_FALSE)(?<!\\-|\\_|\\w)",
+      "name": "keyword.operator.netscaler"
+    }
+  ],
+  "repository": {
+      "escaped_char": {
+        "match": "\\\\(?:[0-7]{1,3}|x[\\da-fA-F]{1,2}|.)",
+        "name": "constant.character.escape.netscaler"
+      }
+    }
+}
