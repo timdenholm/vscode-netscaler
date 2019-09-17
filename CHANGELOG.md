@@ -1,3 +1,8 @@
+# v0.2.2
+
+## Enhancements
+* Added some initial snippets with tab-completion for common commands such as creating CS and LB vServers, Monitors, and IPs
+
 # v0.2.0
 
 ## Enhancements
