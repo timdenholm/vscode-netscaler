@@ -1,65 +1,70 @@
 {
-    "name": "netscaler",
-    "displayName": "ns.conf",
-    "description": "Syntax highlighting and snippets for Citrix ADC/NetScaler configuration (ns.conf) files.",
-    "version": "0.2.1",
-    "publisher": "timdenholm",
-    "license": "APACHE",
-    "engines": {
-        "vscode": "^1.5.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/timdenholm/vscode-netscaler/"
-    },
-    "bugs": {
-        "url": "https://github.com/timdenholm/vscode-netscaler/issues/"
-    },
-    "categories": [
-        "Programming Languages",
-        "Snippets"
-    ],
-    "contributes": {
-        "languages": [{
-            "id": "netscaler",
-            "aliases": [
-                "NetScaler",
-                "netscaler"
-            ],
-            "extensions": [
-                ".conf",
-                ".txt"
-            ],
-            "filenames": [
-                "ns.conf"
-            ],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "netscaler",
-            "scopeName": "text.netscaler",
-            "path": "./syntaxes/netscaler.tmLanguage.json"
-        }],
-        "snippets": [
-            {
-                "lanugage": "netscaler",
-                "path": "./snippets/basic.json"
-            },
-            {
-                "lanugage": "netscaler",
-                "path": "./snippets/content-switching.json"
-            },
-            {
-                "lanugage": "netscaler",
-                "path": "./snippets/load-balancing.json"
-            },
-            {
-                "lanugage": "netscaler",
-                "path": "./snippets/networking.json"
-            },
-            {
-                "lanugage": "netscaler",
-                "path": "./snippets/ssl.json"
-            }]
-    }
+	"name": "netscaler",
+	"displayName": "ns.conf",
+	"description": "Syntax highlighting and snippets for Citrix ADC/NetScaler configuration (ns.conf) files.",
+	"version": "0.2.1",
+	"publisher": "timdenholm",
+	"license": "APACHE",
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/timdenholm/vscode-netscaler/"
+	},
+	"bugs": {
+		"url": "https://github.com/timdenholm/vscode-netscaler/issues/"
+	},
+	"categories": [
+		"Programming Languages",
+		"Snippets"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "netscaler",
+				"aliases": [
+					"NetScaler",
+					"netscaler"
+				],
+				"extensions": [
+					".conf",
+					".txt"
+				],
+				"filenames": [
+					"ns.conf"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "netscaler",
+				"scopeName": "text.netscaler",
+				"path": "./syntaxes/netscaler.tmLanguage.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "netscaler",
+				"path": "./snippets/basic.json"
+			},
+			{
+				"language": "netscaler",
+				"path": "./snippets/content-switching.json"
+			},
+			{
+				"language": "netscaler",
+				"path": "./snippets/load-balancing.json"
+			},
+			{
+				"language": "netscaler",
+				"path": "./snippets/networking.json"
+			},
+			{
+				"language": "netscaler",
+				"path": "./snippets/ssl.json"
+			}
+		]
+	}
 }
