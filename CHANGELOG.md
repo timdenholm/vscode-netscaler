@@ -3,6 +3,11 @@
 ## Enhancements
 * Added some initial snippets with tab-completion for common commands such as creating CS and LB vServers, Monitors, and IPs
 
+# v0.2.1
+
+## Fixes
+* Fixed regression in keywords highlighting where they shouldn't ([#2][1])
+
 # v0.2.0
 
 ## Enhancements
