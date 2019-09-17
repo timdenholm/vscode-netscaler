@@ -2,7 +2,7 @@
     "name": "netscaler",
     "displayName": "ns.conf",
     "description": "Syntax highlighting and snippets for Citrix ADC/NetScaler configuration (ns.conf) files.",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "publisher": "timdenholm",
     "license": "APACHE",
     "engines": {
@@ -40,9 +40,26 @@
             "scopeName": "text.netscaler",
             "path": "./syntaxes/netscaler.tmLanguage.json"
         }],
-        "snippets": [{
-            "lanugage": "netscaler",
-            "path": "./snippets/netscaler.json"
-        }]
+        "snippets": [
+            {
+                "lanugage": "netscaler",
+                "path": "./snippets/basic.json"
+            },
+            {
+                "lanugage": "netscaler",
+                "path": "./snippets/content-switching.json"
+            },
+            {
+                "lanugage": "netscaler",
+                "path": "./snippets/load-balancing.json"
+            },
+            {
+                "lanugage": "netscaler",
+                "path": "./snippets/networking.json"
+            },
+            {
+                "lanugage": "netscaler",
+                "path": "./snippets/ssl.json"
+            }]
     }
 }
