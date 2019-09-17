@@ -1,0 +1,34 @@
+{
+    "Add LB Monitor [HTTP-ECV]": {
+		"prefix": [
+			"add lb monitor HTTP-ECV",
+			"http-ecv"
+		],
+		"body": "add lb monitor ${1:<namee>} HTTP-ECV -send \"${2:GET /}\" -recv \"${3:200 OK}\" -LRTM ${4|ENABLED,DISABLED|} -secure ${5|YES,NO|}"
+	},
+	"Add LB Monitor [TCP-ECV]": {
+		"prefix": [
+			"add lb monitor TCP-ECV",
+			"tcp-ecv"
+		],
+		"body": "add lb monitor ${1:<name>} TCP-ECV -send \"${2:GET /}\" -recv \"${3:200 OK}\" -LRTM ${4|ENABLED,DISABLED|} -secure ${5|YES,NO|}"
+	},
+	"Add LB vServer": {
+		"prefix": [
+			"add lb vserver"
+		],
+		"body": "add lb vserver ${1:<name>} ${2|SSL,ADNS,ADNS_TCP,ANY,DHCPRA,DIAMETER,DNS,DNS_TCP,DTLS,FIX,FTP,GRE,HTTP,IPFIX,LOGSTREAM,MSSQL,MYSQL,NNTP,ORACLE,PPTP,QUIC,RADIUS,RADIUSListener,RDP,RPCSVR,RTSP,SIP_SSL,SIP_TCP,SIP_UDP,SMPP,SNMP,SSL_BRIDGE,SSL_DIAMETER,SSL_FIX,SSL_TCP,SYSLOGTCP,SYSLOGUDP,TCP,TFTP,UDP,USER_SSL_TCP,USER_TCP|} ${3:x.x.x.x} ${4:443} -cltTimeout ${5:180} -appflowLog ${6|ENABLED,DISABLED|}"
+	},
+	"Bind LB vServer to Policy": {
+		"prefix": [
+			"bind lb vserver POLICY"
+		],
+		"body": "bind lb vserver ${1:<name>} -policyName ${2:<policyName>} -priority ${3:100} -type ${4|REQUEST,RESPONSE|}"
+	},
+	"Bind LB vServer to Service Group": {
+		"prefix": [
+			"bind lb vserver SERVICE GROUP"
+		],
+		"body": "bind lb vserver ${1:<name>} ${2:<serviceGroupName>}"
+	}
+}
