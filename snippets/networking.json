@@ -1,0 +1,16 @@
+{
+    "Add Subnet IP (SNIP)": {
+		"prefix": [
+			"add ns ip SNIP",
+			"snip"
+		],
+		"body": "add ns ip ${1:x.x.x.x} ${2:255.255.255.0} -type SNIP -mgmtAccess DISABLED"
+	},
+	"Add Virtual IP (VIP))": {
+		"prefix": [
+			"add ns ip VIP",
+			"vip"
+		],
+		"body": "add ns ip ${1:x.x.x.x} ${2:255.255.255.0} -vServer ENABLED"
+    }
+}
