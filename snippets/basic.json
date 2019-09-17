@@ -1,0 +1,32 @@
+{
+	"Add Server": {
+		"prefix": [
+			"add server"
+		],
+		"body": "add server ${1:<name>} ${2:x.x.x.x}"
+	},
+	"Add Service": {
+		"prefix": [
+			"add service"
+		],
+		"body": "add service ${1:<name>} ${2:x.x.x.x} ${3:<serverName>} ${4|SSL,ADNS,ADNS_TCP,ANY,DHCPRA,DIAMETER,DNS,DNS_TCP,DTLS,FIX,FTP,GRE,HTTP,IPFIX,LOGSTREAM,MSSQL,MYSQL,NNTP,ORACLE,PPTP,QUIC,RADIUS,RADIUSListener,RDP,RPCSVR,RTSP,SIP_SSL,SIP_TCP,SIP_UDP,SMPP,SNMP,SSL_BRIDGE,SSL_DIAMETER,SSL_FIX,SSL_TCP,SYSLOGTCP,SYSLOGUDP,TCP,TFTP,UDP,USER_SSL_TCP,USER_TCP|} ${5:443}"
+	},
+	"Add Service Group": {
+		"prefix": [
+			"add servicegroup"
+		],
+		"body": "add servicegroup ${1:<name>} ${2|SSL,ADNS,ADNS_TCP,ANY,DHCPRA,DIAMETER,DNS,DNS_TCP,DTLS,FIX,FTP,GRE,HTTP,IPFIX,LOGSTREAM,MSSQL,MYSQL,NNTP,ORACLE,PPTP,QUIC,RADIUS,RADIUSListener,RDP,RPCSVR,RTSP,SIP_SSL,SIP_TCP,SIP_UDP,SMPP,SNMP,SSL_BRIDGE,SSL_DIAMETER,SSL_FIX,SSL_TCP,SYSLOGTCP,SYSLOGUDP,TCP,TFTP,UDP,USER_SSL_TCP,USER_TCP|} -appflowLog ${6|ENABLED,DISABLED|} -usip ${7|YES,NO|} -cip ${8|NO,YES X-Forwarded-For|}"
+	},
+	"Bind Service Group to Monitor": {
+		"prefix": [
+			"bind servicegroup MONITOR"
+		],
+		"body": "bind servicegroup ${1:<serviceGroupName>} -monitorName ${2:<monitorName>}"
+	},
+	"Bind Service Group to Server": {
+		"prefix": [
+			"bind servicegroup SERVER"
+		],
+		"body": "bind servicegroup ${1:<serviceGroupName>} ${2:<serverName>} ${3:443}"
+	}
+}
