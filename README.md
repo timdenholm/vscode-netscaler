@@ -4,6 +4,8 @@ Syntax highlighting and snippets for Citrix ADC/NetScaler configuration (ns.conf
 * Syntax highlighting for ns.conf files and CLI commands
 * Snippets  for common CLI commands such as creating and binding objects to vServers; tab-completion is available for various parameters
 
+![alt text][example]
+
 ## Installation
 You can install this extension by following the steps in the [Visual Studio Code documentation][4]. In the Extensions pane, search for `netscaler` and install it there. You will get notified automatically about any future extension updates.
 
@@ -16,3 +18,4 @@ If you experience any issues with the extension, please report them [here][3].
 [2]: https://marketplace.visualstudio.com/items?itemName=timdenholm.netscaler#overview
 [3]: https://github.com/timdenholm/vscode-netscaler/issues
 [4]: https://code.visualstudio.com/docs/editor/extension-gallery
+[example]: https://github.com/timdenholm/vscode-netcaler/example.gif "Example"
