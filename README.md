@@ -1,4 +1,4 @@
-Syntax highlighting for Citrix ADC/NetScaler configuration (ns.conf) files in [Visual Studio Code][1].
+Syntax highlighting and snippets for Citrix ADC/NetScaler configuration (ns.conf) files in [Visual Studio Code][1].
 
 ## Installation
 You can install this extension by following the steps in the [Visual Studio Code documentation][4]. In the Extensions pane, search for "netscaler" and install it there. You will get notified automatically about any future extension updates.
