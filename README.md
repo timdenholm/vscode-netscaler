@@ -18,4 +18,4 @@ If you experience any issues with the extension, please report them [here][3].
 [2]: https://marketplace.visualstudio.com/items?itemName=timdenholm.netscaler#overview
 [3]: https://github.com/timdenholm/vscode-netscaler/issues
 [4]: https://code.visualstudio.com/docs/editor/extension-gallery
-[example]: https://github.com/timdenholm/vscode-netcaler/example.gif "Example"
+[example]: https://raw.githubusercontent.com/timdenholm/vscode-netscaler/master/example.gif "Example"
