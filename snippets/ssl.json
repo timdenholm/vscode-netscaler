@@ -1,0 +1,8 @@
+{
+	"Bind SSL vServer to Certificate": {
+		"prefix": [
+			"bind ssl vserver CERTIFICATE"
+		],
+		"body": "bind ssl vserver ${1:<name>} -certkeyName ${2:<certkeyPairName>}"
+	}
+}
