@@ -1,0 +1,8 @@
+{
+	"Add ACL": {
+		"prefix": [
+			"add ns acl"
+		],
+		"body": "add ns acl ${1:<name>} ${2:|ALLOW,DENY|} -srcIP ${3:|=,!=EQ,NEQ|} ${4:x.x.x.x} -destIP ${5:|=,!=EQ,NEQ|} ${6:x.x.x.x} -stateful ${7:|YES,NO|} -logstate ${8:|ENABLED,DISABLED|} -priority ${9:100}"
+	}
+}
