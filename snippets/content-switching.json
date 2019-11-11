@@ -9,7 +9,7 @@
 		"prefix": [
 			"add cs policy",
 		],
-		"body": "add cs policy ${1:<name>} -policy \"${2:policyExpression}\" -action ${3:actionName}"
+		"body": "add cs policy ${1:<name>} -rule \"${2:policyExpression}\" -action ${3:actionName}"
 	},
 	"Add CS vServer": {
 		"prefix": [
