@@ -45,7 +45,7 @@
       }]
     },
     {
-      "match": "(?<!\\-|\\_|\\w)(HTTP|SSL|DNS|ANY|TCP|Done|SSL_BRIDGE|NONE|NORMAL|ON|ALLOW|DENY|OFF|Browser|all|default|none|RESPONSE|REQUEST|END|NEXT|Optional|NO|YES|DISABLED|ENABLED|Major|Minor|REGEX|TRANSPARENT|RES_OVERRIDE|REQ_OVERRIDE|noop|BASEFILE|Deltajs|debug|info|critical|warning|primary|secondary|RES_DEFAULT|REQ_DEFAULT|replace|replace_all|insert_before_all|insert_before|insert_http_header|nocache|roundrobin|generic|public|nopolicy|DER|ASYMMETRIC|SYMMETRIC|specific|UTF_8|VIP|link-local|NSIP|MIP|SNIP|SECUREONLY|ShareFile_Policy|ShareFile_Action|ShareFile_Profile|_SF_SESSION_ACT|_SF_SESSION_POL|TRUE|FALSE|ns_true|ns_false|true|false)(?!\\-|\\_|\\w)",
+      "match": "(?<!\\-|\\_|\\w)(HTTP|SSL|DNS|ANY|TCP|UDP|Done|SSL_BRIDGE|NONE|NORMAL|ON|ALLOW|DENY|OFF|Browser|all|default|none|RESPONSE|REQUEST|END|NEXT|Optional|NO|YES|DISABLED|ENABLED|Major|Minor|REGEX|TRANSPARENT|RES_OVERRIDE|REQ_OVERRIDE|noop|BASEFILE|Deltajs|debug|info|critical|warning|primary|secondary|RES_DEFAULT|REQ_DEFAULT|replace|replace_all|insert_before_all|insert_before|insert_http_header|nocache|roundrobin|generic|public|nopolicy|DER|ASYMMETRIC|SYMMETRIC|specific|UTF_8|VIP|link-local|NSIP|MIP|SNIP|SECUREONLY|ShareFile_Policy|ShareFile_Action|ShareFile_Profile|_SF_SESSION_ACT|_SF_SESSION_POL|TRUE|FALSE|ns_true|ns_false|true|false|PRIMARY|SECONDARY|BROWSER|NEVER|REMOTE|ENABLE|DISABLE|BOTH|NOOP|RESET|DOCLIENTAUTH|DROP|RULE|ALL|EMERGENCY|ALERT|TOKEN|ACTIVE|CRITICAL|ERROR|WARNING|INFORMATIONAL|DEBUG|COOKIEINSERT|SOURCEIP|SOURCEIPHASH|ROUNDROBIN|LEASTCONNECTION|SSLSESSION|CVPN|POST|GET|PFX)(?!\\-|\\_|\\w)",
       "name": "constant.language.netscaler"
     },
     {
