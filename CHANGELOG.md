@@ -1,3 +1,8 @@
+## v0.2.3
+
+### Enhancements
+* Added highlighting of additional parameter keywords
+
 ## v0.2.2
 
 ### Enhancements
