@@ -7,7 +7,7 @@
       "name": "comment.netscaler"
     },
     {
-      "match": "\\s+[0-9]+",
+      "match": "\\s+[0-9]+\\s",
       "name": "constant.numeric.netscaler"
     },
     {
@@ -27,13 +27,13 @@
       "name": "keyword.operator.netscaler"
     },
     {
-      "begin": "\"",
+      "begin": "\\s\"",
       "beginCaptures": {
         "0": {
           "name": "punctuation.definition.string.begin.netscaler"
         }
       },
-      "end": "\"",
+      "end": "\"\\s",
       "endCaptures": {
         "0": {
           "name": "punctuation.definition.string.end.netscaler"
@@ -45,24 +45,64 @@
       }]
     },
     {
-      "match": "(?<!\\-|\\_|\\w)(HTTP|SSL|DNS|ANY|TCP|UDP|Done|SSL_BRIDGE|NONE|NORMAL|ON|ALLOW|DENY|OFF|Browser|all|default|none|RESPONSE|REQUEST|END|NEXT|Optional|NO|YES|DISABLED|ENABLED|Major|Minor|REGEX|TRANSPARENT|RES_OVERRIDE|REQ_OVERRIDE|noop|BASEFILE|Deltajs|debug|info|critical|warning|primary|secondary|RES_DEFAULT|REQ_DEFAULT|replace|replace_all|insert_before_all|insert_before|insert_http_header|nocache|roundrobin|generic|public|nopolicy|DER|ASYMMETRIC|SYMMETRIC|specific|UTF_8|VIP|link-local|NSIP|MIP|SNIP|SECUREONLY|ShareFile_Policy|ShareFile_Action|ShareFile_Profile|_SF_SESSION_ACT|_SF_SESSION_POL|TRUE|FALSE|ns_true|ns_false|true|false|PRIMARY|SECONDARY|BROWSER|NEVER|REMOTE|ENABLE|DISABLE|BOTH|NOOP|RESET|DOCLIENTAUTH|DROP|RULE|ALL|EMERGENCY|ALERT|TOKEN|ACTIVE|CRITICAL|ERROR|WARNING|INFORMATIONAL|DEBUG|COOKIEINSERT|SOURCEIP|SOURCEIPHASH|ROUNDROBIN|LEASTCONNECTION|SSLSESSION|CVPN|POST|GET|PFX|delete_http_header|delete_all|http_res|NOREWRITE|redirect|respondwith)(?!\\-|\\_|\\w)",
+      "begin": "\\sq\/",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.netscaler"
+        }
+      },
+      "end": "\/\\s",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.netscaler"
+        }
+      },
+      "name": "string.quoted.double.netscaler",
+      "patterns": [{
+        "include": "#escaped_char"
+      }]
+    },
+    {
+      "begin": "\\sq{",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.netscaler"
+        }
+      },
+      "end": "}\\s",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.netscaler"
+        }
+      },
+      "name": "string.quoted.double.netscaler",
+      "patterns": [{
+        "include": "#escaped_char"
+      }]
+    },
+    {
+      "match": "(?<!\\-|\\_|\\w) (HTTP|SSL|DNS|ANY|TCP|UDP|Done|SSL_BRIDGE|NONE|NORMAL|ON|ALLOW|DENY|OFF|Browser|all|default|none|RESPONSE|REQUEST|END|NEXT|Optional|NO|YES|DISABLED|ENABLED|Major|Minor|REGEX|TRANSPARENT|RES_OVERRIDE|REQ_OVERRIDE|noop|BASEFILE|Deltajs|debug|info|critical|warning|primary|secondary|RES_DEFAULT|REQ_DEFAULT|replace|replace_all|insert_before_all|insert_before|insert_http_header|nocache|roundrobin|generic|public|nopolicy|DER|ASYMMETRIC|SYMMETRIC|specific|UTF_8|VIP|link-local|NSIP|MIP|SNIP|SECUREONLY|ShareFile_Policy|ShareFile_Action|ShareFile_Profile|_SF_SESSION_ACT|_SF_SESSION_POL|TRUE|FALSE|ns_true|ns_false|true|false|PRIMARY|SECONDARY|BROWSER|NEVER|REMOTE|ENABLE|DISABLE|BOTH|NOOP|RESET|DOCLIENTAUTH|DROP|RULE|ALL|EMERGENCY|ALERT|TOKEN|ACTIVE|CRITICAL|ERROR|WARNING|INFORMATIONAL|DEBUG|COOKIEINSERT|SOURCEIP|SOURCEIPHASH|ROUNDROBIN|LEASTCONNECTION|SSLSESSION|CVPN|POST|GET|PFX|delete_http_header|delete_all|http_res|NOREWRITE|redirect|respondwith) (?!\\-|\\_|\\w)",
       "name": "constant.language.netscaler"
     },
     {
-      "match": "(?<!\\-|\\_|\\w)(add|bind|set|remove|rm|show|sh|unbind|enable|disable|link|unset|show|stat|rename|apply)(?!-|\\_|\\w)",
+      "match": "^(add|bind|set|remove|rm|show|sh|unbind|enable|disable|link|unset|show|stat|rename|apply)(?!-|\\_|\\w)",
       "name": "keyword.other.control.netscaler"
     },
     {
-      "match": "(?<!\\-|\\_|\\w)(stream|feo|appqoe|appflow|transform|tunnel|uiinternal|filter|rise|callhome|aaa|route|responder|rewrite|vpn|interface|ns|audit|system|rsskeytype|lacp|vlan|snmp|ipsec|interfacePair|fis|nd6RAvariables|ssl|server|subscriber|authentication|authorization|lb|serviceGroup|gslb|cmp|L3Param|appfw|ip6TunnelParam|ptp|dns|cache|HA|servicegroup|AppFlow|CH|CF|WL|cs|CR|sslvpn|FR|L3|MBF|Edge|USNIP|PMTUD|rdp|ca|service|locationParameter|tm|LO|channel|LA)(?!-|\\_|\\w)",
+      "match": "(?<!\\-|\\_|\\w)(stream|feo|appqoe|appflow|transform|tunnel|uiinternal|filter|rise|callhome|aaa|route|responder|rewrite|vpn|interface|ns|audit|system|rsskeytype|lacp|vlan|snmp|ipsec|interfacePair|fis|nd6RAvariables|ssl|server|subscriber|authentication|authorization|lb|serviceGroup|gslb|cmp|L3Param|appfw|ip6TunnelParam|ptp|dns|cache|HA|servicegroup|AppFlow|CH|CF|WL|cs|CR|sslvpn|FR|L3|MBF|Edge|TCPB|ULFD|USNIP|PMTUD|rdp|ca|service|locationParameter|tm|LO|channel|LA|SP|LB|CS|CMP|SSL|IC|SSLVPN|AAA|REWRITE|AppFw|RESPONDER)(?!-|\\_|\\w)",
       "name": "entity.name.class.netscaler"
     },
     {
-      "match": "(?<!\\-|\\_|\\w)(acl|settings|collector|limitIdentifier|expression|stringmap|partition|ip|ip6|vserver|policy|action|group|user|hostName|alarm|community|parameter|trap|option|tcpProfile|pbr|certkey|cipher|encryptionParams|global|nsRec|addRec|config|feature|mode|profile|radiusAction|view|suffix|zone|sessionParameter|crl|authnProfile|nameServer|weblogparam|selector|eula|httpParam|ptrRec|tcpbufParam|site|certKey|manager|syslogAction|cachegroup|messageaction|node|sessionPolicy|rpcNode|monitor|sessionAction|policylabel|syslogPolicy|trafficPolicy|certPolicy|certAction|trafficAction|portaltheme|clientlessAccessPolicy|param|clientlessAccessProfile|formSSOAction|intranetApplication|cmdPolicy|preauthenticationaction|httpprofile|patset|contentGroup|radiusPolicy|nameserver|diameter|ldapAction|tcpbufparam|tcpParam|serverprofile|preauthenticationpolicy|servicegroup|ldapPolicy|superuser|httpProfile|url|samlAction|samlPolicy|httpCallout|trafficDomain|rnat|inat|pbrs|loginSchemaPolicy|negotiatePolicy|loginSchema|negotiateAction|certParams)(?!-|\\_|\\w)",
+      "match": "(?<!\\-|\\_|\\w)(acl|settings|collector|limitIdentifier|expression|stringmap|partition|ip|ip6|vserver|policy|action|group|user|hostName|alarm|community|parameter|trap|option|tcpProfile|pbr|certkey|cipher|encryptionParams|global|nsRec|addRec|config|feature|mode|profile|radiusAction|view|suffix|zone|sessionParameter|crl|authnProfile|nameServer|weblogparam|selector|eula|httpParam|ptrRec|tcpbufParam|site|certKey|manager|syslogAction|cachegroup|messageaction|node|sessionPolicy|rpcNode|monitor|sessionAction|policylabel|syslogPolicy|trafficPolicy|certPolicy|certAction|trafficAction|portaltheme|clientlessAccessPolicy|param|clientlessAccessProfile|formSSOAction|intranetApplication|cmdPolicy|preauthenticationaction|httpprofile|patset|contentGroup|radiusPolicy|nameserver|diameter|ldapAction|tcpbufparam|tcpParam|serverprofile|preauthenticationpolicy|servicegroup|ldapPolicy|superuser|httpProfile|url|samlAction|samlPolicy|httpCallout|trafficDomain|rnat|inat|pbrs|loginSchemaPolicy|negotiatePolicy|loginSchema|negotiateAction|certParams|LBVSERVER|GSLBVSERVER|CRVSERVER|VPNVSERVER|CSVSERVER|AUTHENTICATIONVSERVER|SERVER|SERVICE|SERVICEGROUP|GSLBSERVICE|EXPRESSION|VPNURL)(?!-|\\_|\\w)",
       "name": "entity.name.function.netscaler"
     },
     {
       "match": "(?<!\\w)\\-\\w+(?!\\w)",
       "name": "support.function.netscaler"
+    },
+    {
+      "match": "(?<= -cipherName )([^ ]*(SSL(2|3)-|-EXP-|-RC4-|-3*DES-|-MD5)[^ \\n\\r]*)\\s",
+      "name": "keyword.other.control.netscaler"
     }
   ],
   "repository": {
