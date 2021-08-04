@@ -21,6 +21,8 @@ If you experience any issues with the extension, please report them [here][3].
 ## License
 Licensed under the Apache License, Version 2.0
 
+&copy; Tim Denholm
+
 [1]: https://code.visualstudio.com
 [2]: https://marketplace.visualstudio.com/items?itemName=timdenholm.netscaler#overview
 [3]: https://github.com/timdenholm/vscode-netscaler/issues
