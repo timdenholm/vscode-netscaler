@@ -14,8 +14,17 @@ This extension is published on the [Visual Studio Marketplace][2].
 ## Reporting issues
 If you experience any issues with the extension, please report them [here][3].
 
+## Credits
+* [@timdenholm][timdenholm]
+* [@alphaskade][alphaskade]
+
+## License
+Licensed under the Apache License, Version 2.0
+
 [1]: https://code.visualstudio.com
 [2]: https://marketplace.visualstudio.com/items?itemName=timdenholm.netscaler#overview
 [3]: https://github.com/timdenholm/vscode-netscaler/issues
 [4]: https://code.visualstudio.com/docs/editor/extension-gallery
 [example]: https://raw.githubusercontent.com/timdenholm/vscode-netscaler/master/example.gif "Example"
+[timdenholm]: https://github.com/timdenholm
+[alphaskade]: https://github.com/alphaskade
