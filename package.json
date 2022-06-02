@@ -58,6 +58,10 @@
             },
             {
                 "language": "netscaler",
+                "path": "./snippets/ns.json"
+            },
+            {
+                "language": "netscaler",
                 "path": "./snippets/ssl.json"
             }
         ]
