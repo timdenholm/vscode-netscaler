@@ -11,6 +11,13 @@ You can install this extension by following the steps in the [Visual Studio Code
 
 This extension is published on the [Visual Studio Marketplace][2].
 
+### Enable support for auto-complete in snippets
+By default Visual Studio Code will prevent auto-complete/quick suggestions for the values that you enter into the snippet arguments e.g. a vServer or Service Group name. To enable auto-completion, add the following line to your Visual Studio Code `settings.json` file:
+
+```json
+"editor.suggest.snippetsPreventQuickSuggestions": false
+```
+
 ## Reporting issues
 If you experience any issues with the extension, please report them [here][3].
 
