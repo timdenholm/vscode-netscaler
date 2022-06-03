@@ -1,5 +1,5 @@
 {
-    "name": "Netscaler",
+    "name": "NetScaler",
     "scopeName": "text.netscaler",
     "uuid": "59aad49b-40da-4cbc-8106-8d93ba99014f",
     "patterns": [{
@@ -96,17 +96,17 @@
         },
         {
             "comment": "Initial operation type. Must be at the start of a line.",
-            "match": "(?i)^(add|apply|bind|create|disable|enable|link|remove|rename|rm|set|sh|show|show|stat|unbind|unset)(?!-|\\_|\\w)",
+            "match": "(?i)^(add|apply|bind|create|disable|enable|link|remove|rename|rm|save|set|sh|show|show|stat|unbind|unset)(?!-|\\_|\\w)",
             "name": "keyword.other.control.netscaler"
         },
         {
             "comment": "Command area declaration. Case insensitive. Must be after an operation and a space.",
-            "match": "(?i)(?<=(add|apply|bind|disable|enable|link|remove|rename|rm|set|sh|show|show|stat|unbind|unset) )(aaa|appflow|appfw|appqoe|audit|authentication|authorization|ca|cache|callhome|cf|ch|channel|cmp|contentinspection|cr|cs|db|dns|edge|feo|filter|fis|fr|gslb|ha|ic|interface|interfacepair|ip6tunnelparam|ipsec|l3|l3param|la|lacp|lb|lo|locationparameter|mbf|nd6ravariables|ns|pmtud|policy|ptp|qos|rdp|responder|rewrite|rise|route|rsskeytype|server|service|servicegroup|snmp|sp|ssl|sslvpn|stream|subscriber|system|tcpb|tm|transform|tunnel|uiinternal|ulfd|urlfiltering|usnip|videooptimization|vlan|vpn|wl|)(?=\\s)",
+            "match": "(?i)(?<=(add|apply|bind|create|disable|enable|link|remove|rename|rm|save|set|sh|show|show|stat|unbind|unset) )(aaa|appflow|appfw|appqoe|audit|authentication|authorization|ca|cache|callhome|cf|ch|channel|cmp|contentinspection|cr|cs|db|dns|edge|feo|filter|fis|fr|gslb|ha|ic|interface|interfacepair|ip6tunnelparam|ipsec|kek|l3|l3param|la|lacp|lb|lo|locationparameter|mbf|nd6ravariables|ns|ntp|pmtud|policy|ptp|qos|rdp|responder|rewrite|rise|route|rpcNode|rsskeytype|server|service|servicegroup|snmp|sp|ssl|sslvpn|stream|subscriber|system|tcpb|tm|transform|tunnel|uiinternal|ulfd|urlfiltering|usnip|videooptimization|vlan|vpn|wl|)(?=\\s)",
             "name": "entity.name.class.netscaler"
         },
         {
             "comment": "Networking command area",
-            "match": "(?i)(?<=(add|apply|bind|disable|enable|link|remove|rename|rm|set|sh|show|show|stat|unbind|unset) )(appAlgParam|arp|arpparam|bridge|bridgegroup|bridgetable|channel|ci|fis|forwardingSession|inat|inatparam|inatsession|interface|interfacePair|ip6Tunnel|ip6TunnelParam|ipset|ipTunnel|ipTunnelParam|ipv6|L2Param|L3Param|L4Param|lacp|linkset|MapBmr|MapDmr|MapDomain|nat64|nat64param|nd6|nd6RAvariables|netbridge|netProfile|onLinkIPv6Prefix|ptp|rnat|rnat6|rnatglobal|rnatip|rnatparam|rnatsession|route|route6|rsskeytype|tunnelip|tunnelip6|vlan|vrID|vrID6|vrIDParam|vxlan|vxlanVlanMap)(?=\\s)",
+            "match": "(?i)(?<=(add|apply|bind|create|disable|enable|link|remove|rename|rm|save|set|sh|show|show|stat|unbind|unset) )(appAlgParam|arp|arpparam|bridge|bridgegroup|bridgetable|channel|ci|fis|forwardingSession|inat|inatparam|inatsession|interface|interfacePair|ip6Tunnel|ip6TunnelParam|ipset|ipTunnel|ipTunnelParam|ipv6|L2Param|L3Param|L4Param|lacp|linkset|MapBmr|MapDmr|MapDomain|nat64|nat64param|nd6|nd6RAvariables|netbridge|netProfile|onLinkIPv6Prefix|ptp|rnat|rnat6|rnatglobal|rnatip|rnatparam|rnatsession|route|route6|rsskeytype|tunnelip|tunnelip6|vlan|vrID|vrID6|vrIDParam|vxlan|vxlanVlanMap)(?=\\s)",
             "name": "entity.name.class.netscaler"
         },
         {
@@ -421,7 +421,7 @@
         },
         {
             "comment": "lb-vserver service types",
-            "match": "(?<=vserver.*\\s)(HTTP|FTP|TCP|UDP|SSL|SSL_BRIDGE|SSL_TCP|DTLS|NNTP|DNS|DHCPRA|ANY|SIP_UDP|SIP_TCP|SIP_SSL|DNS_TCP|RTSP|PUSH|SSL_PUSH|RADIUS|RDP|MYSQL|MSSQL|DIAMETER|SSL_DIAMETER|TFTP|ORACLE|SMPP|SYSLOGTCP|SYSLOGUDP|FIX|SSL_FIX|USER_TCP|USER_SSL_TCP)(?=\\s)",
+            "match": "(?<=vserver.*\\s)(HTTP|FTP|TCP|UDP|SSL|SSL_BRIDGE|SSL_TCP|DTLS|NNTP|DNS|DHCPRA|ANY|SIP_UDP|SIP_TCP|SIP_SSL|DNS_TCP|RTSP|PUSH|SSL_PUSH|RADIUS|RDP|MYSQL|MSSQL|DIAMETER|SSL_DIAMETER|TFTP|ORACLE|SMPP|SYSLOGTCP|SYSLOGUDP|FIX|SSL_FIX|PROXY|USER_TCP|USER_SSL_TCP|QUIC|IPFIX|LOGSTREAM|MONGO|MONGO_TLS|MQTT|MQTT_TLS|QUIC_BRIDGE|HTTP_QUIC)(?=\\s)",
             "name": "entity.name.function.netscaler"
         },
         {
