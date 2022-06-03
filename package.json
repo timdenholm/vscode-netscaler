@@ -42,6 +42,10 @@
         }],
         "snippets": [{
                 "language": "netscaler",
+                "path": "./snippets/base-config.json"
+            },
+            {
+                "language": "netscaler",
                 "path": "./snippets/basic.json"
             },
             {
