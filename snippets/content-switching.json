@@ -1,26 +1,26 @@
 {
-	"Add CS Action": {
-		"prefix": [
-			"add cs action",
-		],
-		"body": "add cs action ${1:<name>} -targetLBVserver ${2:<vserverName>}"
-	},
-	"Add CS Policy": {
-		"prefix": [
-			"add cs policy",
-		],
-		"body": "add cs policy ${1:<name>} -rule \"${2:policyExpression}\" -action ${3:actionName}"
-	},
-	"Add CS vServer": {
-		"prefix": [
-			"add cs vserver"
-		],
-		"body": "add cs vserver ${1:<name>} ${2|SSL,HTTP,TCP,FTP,RTSP,SSL_TCP,UDP,DNS,SIP_UDP,SIP_TCP,SIP_SSL,ANY,RADIUS,RDP,MYSQL,MSSQL,DIAMETER,SSL_DIAMETER,DNS_TCP,ORACLE,SMPP|} ${3:x.x.x.x} ${4:443} -cltTimeout ${5:180}"
-	},
-	"Bind CS vServer to Policy": {
-		"prefix": [
-			"bind cs vserver POLICY"
-		],
-		"body": "bind cs vserver ${1:<name>} -policyName ${2:<policyName>} -priority ${3:100} -type ${4|REQUEST,RESPONSE|}"
-	}
+    "Add CS Action": {
+        "prefix": [
+            "add cs action"
+        ],
+        "body": "add cs action ${1:<name>} -targetLBVserver ${2:<vserverName>}"
+    },
+    "Add CS Policy": {
+        "prefix": [
+            "add cs policy"
+        ],
+        "body": "add cs policy ${1:<name>} -rule \"${2:policyExpression}\" -action ${3:actionName}"
+    },
+    "Add CS vServer": {
+        "prefix": [
+            "add cs vserver"
+        ],
+        "body": "add cs vserver ${1:<name>} ${2|SSL,HTTP,TCP,FTP,RTSP,SSL_TCP,UDP,DNS,SIP_UDP,SIP_TCP,SIP_SSL,ANY,RADIUS,RDP,MYSQL,MSSQL,DIAMETER,SSL_DIAMETER,DNS_TCP,ORACLE,SMPP|} ${3:x.x.x.x} ${4:443} -cltTimeout ${5:180}"
+    },
+    "Bind CS vServer to Policy": {
+        "prefix": [
+            "bind cs vserver POLICY"
+        ],
+        "body": "bind cs vserver ${1:<name>} -policyName ${2:<policyName>} -priority ${3:100} -type ${4|REQUEST,RESPONSE|}"
+    }
 }
