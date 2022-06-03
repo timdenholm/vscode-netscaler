@@ -1,8 +1,38 @@
 {
-	"Bind SSL vServer to Certificate": {
-		"prefix": [
-			"bind ssl vserver CERTIFICATE"
-		],
-		"body": "bind ssl vserver ${1:<name>} -certkeyName ${2:<certkeyPairName>}"
-	}
+    "Add SSL Cipher Group and Profile (SSL Labs A+ Q4 2021)": {
+        "prefix": [
+            "add ssl cipher",
+            "add ssl profile"
+        ],
+        "body": [
+            "${LINE_COMMENT} Add SSL Cipher Group and SSL Profile (SSL Labs A+ Q4 2021)",
+            "${LINE_COMMENT} See more information at https://docs.citrix.com/en-us/tech-zone/build/tech-papers/networking-tls-best-practices.html",
+            "add ssl cipher ${1:<cipher_group_name>}",
+            "bind ssl cipher ${1} -cipherName TLS1.3-AES256-GCM-SHA384",
+            "bind ssl cipher ${1} -cipherName TLS1.3-AES128-GCM-SHA256",
+            "bind ssl cipher ${1} -cipherName TLS1.3-CHACHA20-POLY1305-SHA256",
+            "bind ssl cipher ${1} -cipherName TLS1.2-ECDHE-ECDSA-AES256-GCM-SHA384",
+            "bind ssl cipher ${1} -cipherName TLS1.2-ECDHE-ECDSA-AES128-GCM-SHA256",
+            "bind ssl cipher ${1} -cipherName TLS1.2-ECDHE-ECDSA-AES256-SHA384",
+            "bind ssl cipher ${1} -cipherName TLS1.2-ECDHE-RSA-AES256-GCM-SHA384",
+            "",
+            "add ssl profile ${2:<ssl_profile_name>} -tls1 DISABLED -tls11 DISABLED -tls12 ENABLED -tls13 ENABLED -denySSLReneg NONSECURE -HSTS ENABLED -maxage 157680000",
+            "unbind ssl profile ${2} -cipherName DEFAULT",
+            "bind ssl profile ${2} -cipherName ${1}"
+        ]
+    },
+    "Bind SSL vServer to Certificate": {
+        "prefix": [
+            "bind ssl vserver CERTIFICATE"
+        ],
+        "body": "bind ssl vserver ${1:<name>} -certkeyName ${2:<certkeyPairName>}"
+    },
+    "Bind SSL vServer to SSL Profile": {
+        "prefix": [
+            "set ssl vserver"
+        ],
+        "body": [
+            "set ssl vserver ${1:<name>} -sslProfile ${2:<sslProfileName>}"
+        ]
+    }
 }
