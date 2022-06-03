@@ -1,3 +1,11 @@
+## v0.3.1
+
+### Enhancements
+* Added additional operation keywords and service types to syntax definition
+* Added additional snippets:
+  * Add SSL Cipher Group and SSL Profile, based on [Citrix Tech Zone: Networking SSL/TLS Best Practices (SSL Labs A+ Q4 2021)][6]
+  * Apply Base Configuration Settings to a new Citrix ADC, based on [Citrix Tech Zone: Best Practices for Citrix ADC Deployment][7]
+
 ## v0.3.0
 
 Many thanks to [@alphaskade][alphaskade] for their contributions to this release.
@@ -40,4 +48,6 @@ Many thanks to [@alphaskade][alphaskade] for their contributions to this release
 [3]: https://github.com/timdenholm/vscode-netscaler/issues/11
 [4]: https://github.com/timdenholm/vscode-netscaler/issues/13
 [5]: https://github.com/timdenholm/vscode-netscaler/pull/14
+[6]: https://docs.citrix.com/en-us/tech-zone/build/tech-papers/networking-tls-best-practices.html
+[7]: https://docs.citrix.com/en-us/tech-zone/build/tech-papers/best-practices-citrix-adc-deployments.html
 [alphaskade]: https://github.com/alphaskade
