@@ -51,7 +51,7 @@ The following snippets provide shortcuts to common commands as well as scaffoldi
 - `add ns ip VIP`: Add Virtual IP (VIP)
 
 **SSL**
-- `add ssl cipher|profile`: Add SSL Cipher Group and SSL Profile based on SSL Labs A+ Q4 2021 recommendation, see [more information][6]
+- `add ssl cipher`, `add ssl profile`: Add SSL Cipher Group and SSL Profile based on SSL Labs A+ Q4 2021 recommendation, see [more information][6]
 - `bind ssl vserver CERTIFICATE`: Bind SSL vServer to Certificate
 - `set ssl vserver PROFILE`: Bind SSL vServer to SSL Profile
 
