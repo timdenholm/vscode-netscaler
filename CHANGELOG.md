@@ -1,3 +1,8 @@
+## v1.0.0
+
+### Enhancements
+* Added additional utility commands([#17][8])
+
 ## v0.3.1
 
 ### Enhancements
@@ -51,3 +56,4 @@ Many thanks to [@alphaskade][alphaskade] for their contributions to this release
 [6]: https://docs.citrix.com/en-us/tech-zone/build/tech-papers/networking-tls-best-practices.html
 [7]: https://docs.citrix.com/en-us/tech-zone/build/tech-papers/best-practices-citrix-adc-deployments.html
 [alphaskade]: https://github.com/alphaskade
+[8]: https://github.com/timdenholm/vscode-netscaler/issues/17
