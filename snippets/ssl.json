@@ -29,7 +29,7 @@
     },
     "Bind SSL vServer to SSL Profile": {
         "prefix": [
-            "set ssl vserver"
+            "set ssl vserver PROFILE"
         ],
         "body": [
             "set ssl vserver ${1:<name>} -sslProfile ${2:<sslProfileName>}"
