@@ -2,7 +2,7 @@
     "name": "netscaler",
     "displayName": "ns.conf",
     "description": "Syntax highlighting and snippets for Citrix ADC/NetScaler configuration (ns.conf) files.",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "publisher": "timdenholm",
     "license": "APACHE",
     "icon": "images/icon.png",
