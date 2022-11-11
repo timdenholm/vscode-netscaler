@@ -22,47 +22,32 @@ By default Visual Studio Code will prevent auto-complete/quick suggestions for t
 
 The following snippets provide shortcuts to common commands as well as scaffolding configuration based on Citrix Tech Zone recommendations.
 
-## Base configuration
 | Alias                              | Description                                                                                                  |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **Base configuration**             |                                                                                                              |
 | `apply base config`                | Apply Base Configuration Settings to a Citrix ADC. See [more information][5].                                |
-
-## Basic
-| Alias                              | Description                                                                                                  |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **Basic**                          |                                                                                                              |
 | `add server`                       | Add Server                                                                                                   |
 | `add service`                      | Add Service                                                                                                  |
 | `add servicegroup`                 | Add Service Group                                                                                            |
 | `bind servicegroup MONITOR`        | Bind Service Group to Monitor                                                                                |
 | `bind servicegroup SERVER`         | Bind Service Group to Server                                                                                 |
-
-## Content Switching
-| Alias                              | Description                                                                                                  |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **Content Switching**              |                                                                                                              |
 | `add cs action`                    | Add CS Action                                                                                                |
 | `add cs policy`                    | Add CS Policy                                                                                                |
 | `add cs vserver`                   | Add CS vServer                                                                                               |
 | `bind cs vserver POLICY`           | Bind CS vServer to CS Policy                                                                                 |
-
-## Load Balancing
-| Alias                              | Description                                                                                                  |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **Load Balancing**                 |                                                                                                              |
 | `add lb monitor HTTP-ECV`          | Add LB Monitor of type **HTTP-ECV**                                                                          |
 | `add lb monitor TCP-ECV`           | Add LB Monitor of type **TCP-ECV**                                                                           |
 | `add lb vserver`                   | Add LB vServer                                                                                               |
 | `bind lb vserver POLICY`           | Bind LB vServer to Policy                                                                                    |
 | `bind lb vserver SERVICE GROUP`    | Bind LB vServer to Service Group                                                                             |
-
-## Networking
-| Alias                              | Description                                                                                                  |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **Networking**                          |                                                                                                         |
 | `add ns acl`                       | Add ACL                                                                                                      |
 | `add ns ip SNIP`                   | Add Subnet IP (SNIP)                                                                                         |
 | `add ns ip VIP`                    | Add Virtual IP (VIP)                                                                                         |
-
-## SSL
-| Alias                              | Description                                                                                                  |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **SSL**                            |                                                                                                              |
 | `add ssl cipher\|profile`          | Add SSL Cipher Group and SSL Profile based on SSL Labs A+ Q4 2021 recommendation. See [more information][6]. |
 | `bind ssl vserver CERTIFICATE`     | Bind SSL vServer to Certificate                                                                              |
 | `set ssl vserver PROFILE`          | Bind SSL vServer to SSL Profile                                                                              |
