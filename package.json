@@ -2,11 +2,12 @@
     "name": "netscaler",
     "displayName": "ns.conf",
     "description": "Syntax highlighting and snippets for Citrix ADC/NetScaler configuration (ns.conf) files.",
-    "version": "0.3.1",
+    "version": "1.0.0",
     "publisher": "timdenholm",
     "license": "APACHE",
+    "icon": "images/icon.png",
     "engines": {
-        "vscode": "^1.5.0"
+        "vscode": "^1.63.0"
     },
     "repository": {
         "type": "git",
@@ -20,27 +21,32 @@
         "Snippets"
     ],
     "contributes": {
-        "languages": [{
-            "id": "netscaler",
-            "aliases": [
-                "NetScaler",
-                "netscaler"
-            ],
-            "extensions": [
-                ".conf",
-                ".txt"
-            ],
-            "filenames": [
-                "ns.conf"
-            ],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "netscaler",
-            "scopeName": "text.netscaler",
-            "path": "./syntaxes/netscaler.tmLanguage.json"
-        }],
-        "snippets": [{
+        "languages": [
+            {
+                "id": "netscaler",
+                "aliases": [
+                    "NetScaler",
+                    "netscaler"
+                ],
+                "extensions": [
+                    ".conf",
+                    ".txt"
+                ],
+                "filenames": [
+                    "ns.conf"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "netscaler",
+                "scopeName": "text.netscaler",
+                "path": "./syntaxes/netscaler.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
                 "language": "netscaler",
                 "path": "./snippets/base-config.json"
             },
