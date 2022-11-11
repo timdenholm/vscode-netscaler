@@ -73,6 +73,6 @@ Licensed under the Apache License, Version 2.0
 [4]: https://code.visualstudio.com/docs/editor/extension-gallery
 [5]: https://docs.citrix.com/en-us/tech-zone/build/tech-papers/best-practices-citrix-adc-deployments.html#base-configuration-settings
 [6]: https://docs.citrix.com/en-us/tech-zone/build/tech-papers/networking-tls-best-practices.html
-[example]: https://raw.githubusercontent.com/timdenholm/vscode-netscaler/master/example.gif "Example"
+[example]: https://raw.githubusercontent.com/timdenholm/vscode-netscaler/master/images/example.gif "Example"
 [timdenholm]: https://github.com/timdenholm
 [alphaskade]: https://github.com/alphaskade
