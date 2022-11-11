@@ -43,7 +43,7 @@ The following snippets provide shortcuts to common commands as well as scaffoldi
 | `add lb vserver`                   | Add LB vServer                                                                                               |
 | `bind lb vserver POLICY`           | Bind LB vServer to Policy                                                                                    |
 | `bind lb vserver SERVICE GROUP`    | Bind LB vServer to Service Group                                                                             |
-| **Networking**                          |                                                                                                         |
+| **Networking**                     |                                                                                                              |
 | `add ns acl`                       | Add ACL                                                                                                      |
 | `add ns ip SNIP`                   | Add Subnet IP (SNIP)                                                                                         |
 | `add ns ip VIP`                    | Add Virtual IP (VIP)                                                                                         |
