@@ -1,4 +1,11 @@
-## v1.0.0
+## v1.1.0
+
+### Enhancements
+* Added additional command keywords and missing verbs
+* Updated snippets:
+  * Updated SSL Cipher Group and SSL Profile, based on [Citrix Tech Zone: Networking SSL/TLS Best Practices (Q3 2026 Edition) ][9]
+
+## v1.0.2
 
 ### Enhancements
 * Added additional utility commands([#17][8])
@@ -57,3 +64,4 @@ Many thanks to [@alphaskade][alphaskade] for their contributions to this release
 [7]: https://docs.citrix.com/en-us/tech-zone/build/tech-papers/best-practices-citrix-adc-deployments.html
 [alphaskade]: https://github.com/alphaskade
 [8]: https://github.com/timdenholm/vscode-netscaler/issues/17
+[9]: https://community.citrix.com/tech-zone/build/tech-papers/networking-tls-best-practices-2026/
