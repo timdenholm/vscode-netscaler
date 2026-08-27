@@ -103,17 +103,17 @@
         },
         {
             "comment": "Initial operation type. Must be at the start of a line.",
-            "match": "(?i)^(add|apply|bind|create|disable|enable|grep|install|link|ping|ping6|remove|rename|rm|save|scp|set|shell|sh|show|stat|traceroute|traceroute6|unbind|unset)(?!-|\\_|\\w)",
+            "match": "(?i)^(add|apply|bind|clear|convert|create|diff|disable|dump|enable|export|force|grep|import|install|join|kill|link|ping|ping6|query|reboot|remove|rename|rm|save|scp|set|sh|shell|show|shutdown|start|stat|stop|traceroute|traceroute6|unbind|unset)(?!-|\\_|\\w)",
             "name": "keyword.other.control.netscaler"
         },
         {
             "comment": "Command area declaration. Case insensitive. Must be after an operation and a space.",
-            "match": "(?i)(?<=(add|apply|bind|create|disable|enable|link|remove|rename|rm|save|set|sh|show|stat|unbind|unset) )(aaa|appflow|appfw|appqoe|audit|authentication|authorization|ca|cache|callhome|cf|ch|channel|cmp|contentinspection|cr|cs|db|dns|edge|feo|filter|fis|fr|gslb|ha|ic|interface|interfacepair|ip6tunnelparam|ipsec|kek|l3|l3param|la|lacp|lb|lo|locationparameter|mbf|nd6ravariables|ns|ntp|pmtud|policy|ptp|qos|raid|rdp|responder|rewrite|rise|route|rpcNode|rsskeytype|server|service|servicegroup|snmp|sp|ssl|sslvpn|stream|subscriber|system|tcpb|techsupport|tm|transform|tunnel|uiinternal|ulfd|urlfiltering|usnip|videooptimization|vlan|vpn|wl|)(?=\\s)",
+            "match": "(?i)(?<=(add|apply|bind|create|disable|enable|link|remove|rename|rm|save|set|sh|show|stat|unbind|unset) )(aaa|adm|analytics|api|app|appflow|appfw|appqoe|audit|authentication|authorization|autoscale|azure|bot|ca|cache|callhome|cf|ch|channel|cli|cloud|cloudtunnel|cluster|cmp|contentinspection|cr|cs|db|dns|edge|endpoint|extendedmemoryparam|feo|filesystemencryption|filter|fis|fr|gslb|ha|ic|ica|interface|interfacepair|ip6tunnelparam|ipsec|ipsecalg|kek|l3|l3param|la|lacp|lb|lldp|lo|location|locationData|locationFile|locationFile6|locationparameter|lsn|mbf|nd6ravariables|ns|nstrace|ntp|pcp|pmtud|policy|protocol|ptp|qos|quic|quicBridge|radiusNode|raid|rdp|reputation|responder|rewrite|rise|route|router|rpcNode|rsskeytype|server|service|servicegroup|smpp|snmp|sp|spillover|ssl|sslvpn|stream|subscriber|system|tcpb|techsupport|tm|transform|tunnel|uiinternal|ulfd|urlfiltering|user|usnip|videooptimization|vlan|vpn|wl|)(?=\\s)",
             "name": "entity.name.class.netscaler"
         },
         {
             "comment": "Networking command area",
-            "match": "(?i)(?<=(add|apply|bind|create|disable|enable|link|remove|rename|rm|save|set|sh|show|stat|unbind|unset) )(appAlgParam|arp|arpparam|bridge|bridgegroup|bridgetable|channel|ci|fis|forwardingSession|inat|inatparam|inatsession|interface|interfacePair|ip6Tunnel|ip6TunnelParam|ipset|ipTunnel|ipTunnelParam|ipv6|L2Param|L3Param|L4Param|lacp|linkset|MapBmr|MapDmr|MapDomain|nat64|nat64param|nd6|nd6RAvariables|netbridge|netProfile|onLinkIPv6Prefix|ptp|rnat|rnat6|rnatglobal|rnatip|rnatparam|rnatsession|route|route6|rsskeytype|tunnelip|tunnelip6|vlan|vrID|vrID6|vrIDParam|vxlan|vxlanVlanMap)(?=\\s)",
+            "match": "(?i)(?<=(add|apply|bind|create|disable|enable|link|remove|rename|rm|save|set|sh|show|stat|unbind|unset) )(appAlgParam|arp|arpparam|bridge|bridgegroup|bridgetable|channel|ci|fis|forwardingSession|inat|inatparam|inatsession|interface|interfacePair|ip6Tunnel|ip6TunnelParam|ipset|ipTunnel|ipTunnelParam|ipv6|L2Param|L3Param|L4Param|lacp|linkset|MapBmr|MapDmr|MapDomain|nat64|nat64param|nd6|nd6RAvariables|netbridge|netProfile|onLinkIPv6Prefix|portallocation|ptp|rnat|rnat6|rnatglobal|rnatip|rnatparam|rnatsession|route|route6|rsskeytype|tunnelip|tunnelip6|vlan|vrID|vrID6|vrIDParam|vxlan|vxlanVlanMap)(?=\\s)",
             "name": "entity.name.class.netscaler"
         },
         {
@@ -123,13 +123,28 @@
         },
         {
             "comment": "aaa commands",
-            "match": "(?i)(?<=aaa\\s)(certParams|global|group|kcdAccount|ldapParams|otpparameter|parameter|preauthenticationaction|preauthenticationparameter|preauthenticationpolicy|radiusParams|session|ssoprofile|stats|tacacsParams|user)(?=\\s)",
+            "match": "(?i)(?<=aaa\\s)(certParams|global|group|kcdAccount|ldapParams|otpparameter|parameter|preauthenticationaction|preauthenticationparameter|preauthenticationpolicy|proxyparam|radiusParams|session|ssoprofile|stats|tacacsParams|user)(?=\\s)",
             "name": "entity.name.class.netscaler"
         },
         {
+            "comment": "adm commands",
+            "match": "(?i)(?<=adm\\s)(parameter)(?=\\s)",
+            "name": "entity.name.function.netscaler.adm"
+        },
+        {
             "comment": "analytics commands",
-            "match": "(?i)(?<=analytics\\s)(profile)(?=\\s)",
+            "match": "(?i)(?<=analytics\\s)(global|profile)(?=\\s)",
             "name": "entity.name.function.netscaler.analytics"
+        },
+        {
+            "comment": "api commands",
+            "match": "(?i)(?<=api\\s)(profile|spec|specfile)(?=\\s)",
+            "name": "entity.name.function.netscaler.api"
+        },
+        {
+            "comment": "app commands",
+            "match": "(?i)(?<=app\\s)(application)(?=\\s)",
+            "name": "entity.name.function.netscaler.app"
         },
         {
             "comment": "appflow commands",
@@ -138,7 +153,7 @@
         },
         {
             "comment": "appfw commands",
-            "match": "(?i)(?<=appfw\\s)(archive|confidField|customSettings|fieldType|global|htmlerrorpage|JSONContentType|jsonerrorpage|learningdata|learningsettings|policy|policylabel|profile|settings|signatures|stats|transactionRecords|wsdl|XMLContentType|xmlerrorpage|xmlschema)(?=\\s)",
+            "match": "(?i)(?<=appfw\\s)(archive|confidField|customSettings|fieldType|global|gRPCContentType|gRpcWebJSONContentType|gRpcWebTextContentType|htmlerrorpage|JSONContentType|jsonerrorpage|learningdata|learningdatahealth|learningsettings|multipartFormContentType|policy|policylabel|profile|protofile|settings|signatures|stats|transactionRecords|urlEncodedFormContentType|wsdl|XMLContentType|xmlerrorpage|xmlschema)(?=\\s)",
             "name": "entity.name.function.netscaler.appfw"
         },
         {
@@ -153,7 +168,7 @@
         },
         {
             "comment": "authentication commands",
-            "match": "(?i)(?<=authentication\\s)(adfsProxyProfile|authnProfile|azureKeyVault|captchaAction|certAction|certPolicy|citrixAuthAction|dfaAction|dfaPolicy|emailAction|epaAction|ldapAction|ldapPolicy|localPolicy|loginSchema|loginSchemaPolicy|negotiateAction|negotiatePolicy|noAuthAction|OAuthAction|OAuthIdPPolicy|OAuthIDPProfile|Policy|policylabel|pushService|radiusAction|radiusPolicy|samlAction|samlIdPPolicy|samlIdPProfile|samlPolicy|storefrontAuthAction|tacacsAction|tacacsPolicy|vserver|webAuthAction|webAuthPolicy)(?=\\s)",
+            "match": "(?i)(?<=authentication\\s)(adfsProxyProfile|authnProfile|azureKeyVault|captchaAction|certAction|certPolicy|citrixAuthAction|dfaAction|dfaPolicy|emailAction|epaAction|ldapAction|ldapPolicy|localPolicy|loginSchema|loginSchemaPolicy|negotiateAction|negotiatePolicy|noAuthAction|OAuthAction|OAuthIdPPolicy|OAuthIDPProfile|Policy|policylabel|protectedUserAction|pushService|radiusAction|radiusPolicy|samlAction|samlIdPPolicy|samlIdPProfile|samlPolicy|smartAccessPolicy|smartAccessProfile|storefrontAuthAction|tacacsAction|tacacsPolicy|vserver|webAuthAction|webAuthPolicy)(?=\\s)",
             "name": "entity.name.function.netscaler.authentication"
         },
         {
@@ -188,12 +203,17 @@
         },
         {
             "comment": "cloud commands",
-            "match": "(?i)(?<=cloud\\s)(autoscalegroup|credential|parameter|paramInternal|profile|vserverIP)(?=\\s)",
+            "match": "(?i)(?<=cloud\\s)(allowedngsticketprofile|autoscalegroup|awsParam|credential|gcpstaticroutes|ngsparameter|parameter|paramInternal|profile|routes|service|vserverIP)(?=\\s)",
             "name": "entity.name.function.netscaler.cloud"
         },
         {
+            "comment": "cloudtunnel commands",
+            "match": "(?i)(?<=cloudtunnel\\s)(parameter|vserver)(?=\\s)",
+            "name": "entity.name.function.netscaler.cloudtunnel"
+        },
+        {
             "comment": "cluster commands",
-            "match": "(?i)(?<=cluster\\s)(files|instance|node|nodegroup|propstatus|sync)(?=\\s)",
+            "match": "(?i)(?<=cluster\\s)(files|instance|node|nodegroup|propstatus|sync|syncFailures)(?=\\s)",
             "name": "entity.name.function.netscaler.cluster"
         },
         {
@@ -203,7 +223,7 @@
         },
         {
             "comment": "contentInspection commands",
-            "match": "(?i)(?<=contentInspection\\s)(action|callout|global|parameter|policy|policylabel|profile)(?=\\s)",
+            "match": "(?i)(?<=contentInspection\\s)(action|callout|global|parameter|policy|policylabel|profile|stats|wasmProfile)(?=\\s)",
             "name": "entity.name.function.netscaler.contentInspection"
         },
         {
@@ -223,13 +243,18 @@
         },
         {
             "comment": "dns commands",
-            "match": "(?i)(?<=dns\\s)(aaaaRec|action|action64|addRec|cnameRec|global|key|mxRec|nameServer|naptrRec|nsecRec|nsRec|parameter|policy|policy64|policylabel|profile|proxyRecords|ptrRec|records|soaRec|srvRec|stats|subnetcache|suffix|txtRec|view|zone)(?=\\s)",
+            "match": "(?i)(?<=dns\\s)(aaaaRec|action|action64|addRec|caaRec|cnameRec|dsfile|global|key|mxRec|nameServer|naptrRec|negativeCacheRecords|nsecRec|nsRec|parameter|policy|policy64|policylabel|profile|proxyRecords|ptrRec|records|resolverEntry|soaRec|srvRec|stats|subnetcache|suffix|svcbRec|txtRec|view|zone)(?=\\s)",
             "name": "entity.name.function.netscaler.dns"
         },
         {
             "comment": "dos commands",
             "match": "(?i)(?<=dos\\s)(policy|stats)(?=\\s)",
             "name": "entity.name.function.netscaler.dos"
+        },
+        {
+            "comment": "endpoint commands",
+            "match": "(?i)(?<=endpoint\\s)(info)(?=\\s)",
+            "name": "entity.name.function.netscaler.endpoint"
         },
         {
             "comment": "feo commands",
@@ -248,7 +273,7 @@
         },
         {
             "comment": "HA commands",
-            "match": "(?i)(?<=HA\\s)(failover|files|node|sync|syncFailures)(?=\\s)",
+            "match": "(?i)(?<=HA\\s)(failover|files|node|secureheartbeats|sync|syncFailures)(?=\\s)",
             "name": "entity.name.function.netscaler.HA"
         },
         {
@@ -268,7 +293,7 @@
         },
         {
             "comment": "lb commands",
-            "match": "(?i)(?<=lb\\s)(group|metricTable|monbindings|monitor|parameter|persistentSessions|profile|route|route6|sipParameters|vserver|wlm)(?=\\s)",
+            "match": "(?i)(?<=lb\\s)(action|global|group|metricTable|monbindings|monitor|parameter|persistentSessions|profile|route|route6|sipParameters|vserver|wlm)(?=\\s)",
             "name": "entity.name.function.netscaler.lb"
         },
         {
@@ -283,7 +308,7 @@
         },
         {
             "comment": "ns commands",
-            "match": "(?i)(?<=ns\\s)(acl|acl6|acls|acls6|appflowCollector|appflowParam|aptlicense|assignment|capacity|centralmanagementserver|config|connectiontable|consoleloginprompt|cqaparam|dhcpIp|dhcpParams|diameter|encryptionKey|encryptionParams|events|extension|feature|hardware|hmacKey|hostName|httpParam|httpProfile|icapProfile|idletimeout|info|ip|ip6|license|licenseproxyserver|licenseserver|licenseserverpool|limitIdentifier|limitSelector|limitSessions|memory|migration|mode|ns.conf|param|partition|partitionMAC|pbr|pbr6|pbrs|rateControl|rollbackcmd|rpcNode|runningConfig|savedConfig|serviceFunction|servicePath|simpleacl|simpleacl6|sourceroutecachetable|spParams|stats|surgeQ|tcpbufParam|tcpParam|tcpProfile|timeout|timer|timezone|trafficDomain|variable|version|vpxparam|weblogparam|xmlnamespace)(?=\\s)",
+            "match": "(?i)(?<=ns\\s)(acl|acl6|acls|acls6|aigwprofile|appflowCollector|appflowParam|aptlicense|assignment|capacity|centralmanagementserver|channelparam|config|configview|connectiontable|consoleloginprompt|cqaparam|dhcpIp|dhcpParams|diameter|encryptionKey|encryptionParams|events|extension|feature|hardware|hmacKey|hostName|httpParam|httpProfile|icapProfile|idletimeout|info|ip|ip6|job|keymanagerproxy|laslicense|license|licenseactivationdata|licenseparameters|licenseproxyserver|licenseserver|licenseserverpool|limitIdentifier|limitSelector|limitSessions|memory|memrecovery|mgmtparam|migration|mode|nextgenapi|ns.conf|param|partition|partitionMAC|pbr|pbr6|pbrs|rateControl|rollbackcmd|rpcNode|runningConfig|savedConfig|serviceFunction|servicePath|simpleacl|simpleacl6|sourceroutecachetable|spParams|stats|surgeQ|tcpbufParam|tcpParam|tcpProfile|testlicense|timeout|timer|timezone|trafficDomain|variable|variableValues|version|vpxparam|weblogparam|xmlnamespace)(?=\\s)",
             "name": "entity.name.function.netscaler.ns"
         },
         {
@@ -298,7 +323,7 @@
         },
         {
             "comment": "policy commands",
-            "match": "(?i)(?<=policy\\s)(dataset|evaluation|expression|httpCallout|map|param|patClass|patset|stringmap|urlset)(?=\\s)",
+            "match": "(?i)(?<=policy\\s)(dataset|evaluation|expression|httpCallout|map|param|patClass|patset|patsetFile|stringmap|tracing|urlset)(?=\\s)",
             "name": "entity.name.function.netscaler.policy"
         },
         {
@@ -308,13 +333,23 @@
         },
         {
             "comment": "protocol commands",
-            "match": "(?i)(?<=protocol\\s)(http|httpBand|icmp|icmpv6|ip|ipv6|mptcp|tcp|udp)(?=\\s)",
+            "match": "(?i)(?<=protocol\\s)(http|http2|http3|httpBand|icmp|icmpv6|ip|ipv6|mptcp|quic|quicbridge|tcp|udp)(?=\\s)",
             "name": "entity.name.function.netscaler.protocol"
         },
         {
             "comment": "qos commands",
             "match": "(?i)(?<=qos\\s)(stats)(?=\\s)",
             "name": "entity.name.function.netscaler.qos"
+        },
+        {
+            "comment": "quic commands",
+            "match": "(?i)(?<=quic\\s)(param|profile)(?=\\s)",
+            "name": "entity.name.function.netscaler.quic"
+        },
+        {
+            "comment": "quicBridge commands",
+            "match": "(?i)(?<=quicBridge\\s)(profile)(?=\\s)",
+            "name": "entity.name.function.netscaler.quicBridge"
         },
         {
             "comment": "rdp commands",
@@ -338,7 +373,7 @@
         },
         {
             "comment": "router commands",
-            "match": "(?i)(?<=router\\s)(bgp|dynamicRouting|ospf|rip)(?=\\s)",
+            "match": "(?i)(?<=router\\s)(bgp|dynamicRouting|ospf|rip|vtysh)(?=\\s)",
             "name": "entity.name.function.netscaler.router"
         },
         {
@@ -363,7 +398,7 @@
         },
         {
             "comment": "ssl commands",
-            "match": "(?i)(?<=ssl\\s)(action|caCertGroup|cert|certBundle|certChain|certFile|certificateChain|certKey|certLink|certReq|cipher|ciphersuite|crl|crlFile|dhFile|dhParam|dsaKey|dtlsProfile|ecdsaKey|fips|fipsKey|fipsSIMSource|fipsSIMTarget|global|hsmKey|keyFile|logprofile|ocspResponder|parameter|pkcs12|pkcs8|policy|policylabel|profile|rsakey|service|serviceGroup|stats|vserver|wrapkey)(?=\\s)",
+            "match": "(?i)(?<=ssl\\s)(action|cacertbundle|caCertGroup|cert|certBundle|certChain|certFile|certificateChain|certKey|certKeyBundle|certLink|certReq|cipher|ciphersuite|crl|crlFile|defaultProfile|dhFile|dhParam|dsaKey|dtlsProfile|dynamicClientCertCache|ecdsaKey|echConfig|fips|fipsKey|fipsSIMSource|fipsSIMTarget|global|hpkeKey|hsmKey|keyFile|logprofile|ocspResponder|parameter|pkcs12|pkcs8|policy|policylabel|profile|rsakey|service|serviceGroup|stats|vserver|wrapkey|zerotouchparam)(?=\\s)",
             "name": "entity.name.function.netscaler.ssl"
         },
         {
@@ -378,7 +413,7 @@
         },
         {
             "comment": "system commands",
-            "match": "(?i)(?<=system\\s)(autorestorefeature|backup|bw|cmdPolicy|collectionparam|core|countergroup|counters|cpu|dataSource|entity|entitydata|entitytype|eventhistory|extramgmtcpu|global|globaldata|group|hwerror|kek|memory|parameter|restorepoint|session|sshkey|user)(?=\\s)",
+            "match": "(?i)(?<=system\\s)(admuserinfo|autorestorefeature|autosaveparam|backup|bw|cmdPolicy|collectionparam|core|countergroup|counters|cpu|cpuparam|dataSource|entity|entitydata|entitytype|eventhistory|extramgmtcpu|fipsStatus|global|globaldata|group|hwerror|kek|memory|nsbtracing|parameter|restorepoint|ScalableMgmtThreads|session|signedExeReport|sshkey|user)(?=\\s)",
             "name": "entity.name.function.netscaler.system"
         },
         {
@@ -418,7 +453,7 @@
         },
         {
             "comment": "vpn commands",
-            "match": "(?i)(?<=vpn\\s)(alwaysONProfile|clientlessAccessPolicy|clientlessAccessProfile|epaprofile|eula|formSSOAction|global|icaConnection|icaDtlsConnection|intranetApplication|nextHopServer|parameter|pcoipConnection|pcoipProfile|pcoipVserverProfile|portaltheme|samlSSOProfile|sessionAction|sessionPolicy|sfconfig|stats|storeinfo|trafficAction|trafficPolicy|url|urlAction|urlPolicy|vserver)(?=\\s)",
+            "match": "(?i)(?<=vpn\\s)(alwaysONProfile|clientlessAccessPolicy|clientlessAccessProfile|epaprofile|eula|formSSOAction|global|icaConnection|icaDtlsConnection|intranetApplication|nextHopServer|parameter|pcoipConnection|pcoipProfile|pcoipVserverProfile|portaltheme|samlSSOProfile|securePrivateAccessProfile|sessionAction|sessionPolicy|sfconfig|stats|storeinfo|trafficAction|trafficPolicy|url|urlAction|urlPolicy|vserver)(?=\\s)",
             "name": "entity.name.function.netscaler.vpn"
         },
         {
